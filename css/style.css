@@ -1,0 +1,103 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.cover-page {
+  min-height: 100vh;
+  background: rgb(241, 81, 121);
+  background: linear-gradient(
+    135deg,
+    rgba(241, 81, 121, 1) 0%,
+    rgb(164, 37, 107) 60%,
+    rgb(79, 9, 88) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  min-height: 60vh;
+}
+/*MENU START*/
+.menu {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-family: "Cookie", cursive;
+  font-size: 40px;
+  width: auto;
+}
+/*MENU END*/
+
+/*PRESENTATION START*/
+
+.presentation {
+  min-height: 60vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  gap: 1rem;
+}
+
+.presentation-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.presentation-title {
+  text-transform: uppercase;
+  color: gray;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+.presentation-content .presentation-img {
+  max-width: 60vw;
+  bottom: 0;
+}
+
+/*PRESENTATION END*/
+
+/*PROJECT START*/
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 5%;
+}
+
+.project.project-post {
+  gap: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.project .project-title {
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.project .project-img-pic {
+  width: 80%;
+  box-shadow: 9px 7px 9px -1px #a8a8a8;
+}
+.project .project-img {
+  text-align: center;
+}
+
+.project .project-description {
+  color: gray;
+}
