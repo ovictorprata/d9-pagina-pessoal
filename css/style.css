@@ -1,16 +1,10 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Code Pro", monospace;
 }
 .cover-page {
   min-height: 100vh;
-  background: rgb(241, 81, 121);
-  background: linear-gradient(
-    135deg,
-    rgba(241, 81, 121, 1) 0%,
-    rgb(164, 37, 107) 60%,
-    rgb(79, 9, 88) 100%
-  );
-
+  background-color: #000;
+  color: white;
   display: flex;
   flex-direction: column;
 }
@@ -20,7 +14,9 @@ body {
 }
 /*MENU START*/
 .menu {
-  color: white;
+  color: rgb(0, 0, 0);
+  padding: 0px;
+  background-color: white;
 }
 
 a {
@@ -29,16 +25,16 @@ a {
 }
 
 h1 {
-  font-family: "Cookie", cursive;
-  font-size: 40px;
+  font-size: 30px;
   width: auto;
+  font-weight: 700;
 }
 /*MENU END*/
 
 /*PRESENTATION START*/
 
 .presentation {
-  min-height: 60vh;
+  min-height: auto;
   background-color: black;
   color: white;
   display: flex;
@@ -46,6 +42,7 @@ h1 {
   align-items: center;
   font-size: 28px;
   gap: 1rem;
+  padding: 5% 5% 0px 5%;
 }
 
 .presentation-content {
@@ -100,4 +97,39 @@ h1 {
 
 .project .project-description {
   color: gray;
+}
+
+.pie {
+  --w: 150px;
+
+  width: var(--w);
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  place-content: center;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  --p: 90;
+  --b: 15px;
+  --c: rgb(213, 150, 238);
+  color: white;
+}
+.pie:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
 }
