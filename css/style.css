@@ -1,23 +1,48 @@
 body {
   font-family: "Source Code Pro", monospace;
 }
-.cover-page {
-  min-height: 100vh;
-  background-color: #000;
-  color: white;
+
+/*MENU START*/
+
+nav {
   display: flex;
-  flex-direction: column;
+ align-items: center;
+ justify-content: space-between; 
+ flex-direction: row;
+ color: rgb(0, 0, 0);
+ padding: 10px;
+ font-weight: 700;
+
+}
+nav img {
+  width: 15px;
 }
 
-.project {
-  min-height: 60vh;
+/*MY NAME MENU TYPING STYLE*/
+nav .my-name {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 1.5s steps(40), blink 200ms steps(40);
+  border-right: 10px solid white;
 }
-/*MENU START*/
-.menu {
-  color: rgb(0, 0, 0);
-  padding: 0px;
-  background-color: white;
+@keyframes typewriter {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 25%;
+  }
 }
+@keyframes blink {
+  from {
+    border-color: white;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+/*MY NAME MENU END*/
 
 a {
   text-decoration: none;
@@ -25,6 +50,12 @@ a {
 }
 
 h1 {
+  font-size: 20px;
+  width: auto;
+  font-weight: 700;
+}
+
+h2 {
   font-size: 30px;
   width: auto;
   font-weight: 700;
@@ -33,103 +64,73 @@ h1 {
 
 /*PRESENTATION START*/
 
-.presentation {
-  min-height: auto;
+.my-presentation {
   background-color: black;
   color: white;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5%;
+  gap: 5rem;
+}
+
+.my-presentation__content{
+  width: 500px;
+}
+.my-presentation__content > p {
+  padding-top: 10px;
+  padding-left: 5%;
+  line-height: 15px;
+  margin-bottom: 20px;
+}
+
+.my-presentation__content strong {
+  font-weight: 800;
+  color: yellow;d
+}
+
+.my-presentation__img {
+  width: 275px;
+  object-fit: cover;
+  object-position: 20% 65px;
+}
+
+.my-presentation__img > img {
+  border-radius: 50px 50px 50px 50px;
+  width: 275px;
+
+}
+
+/*PORTFOLIO*/
+
+.portfolio {
+  min-height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
-  gap: 1rem;
-  padding: 5% 5% 0px 5%;
+
 }
 
-.presentation-content {
+.portfolio__content{
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
-.presentation-title {
+/*TITLE PORTFOLIO_CONTENT*/
+.portfolio__content > h2{
   text-transform: uppercase;
   color: gray;
   font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.2rem;
 }
-.presentation-content .presentation-img {
-  max-width: 60vw;
+.portfolio img {
+  width: 80%;
   bottom: 0;
 }
-
-/*PRESENTATION END*/
-
-/*PROJECT START*/
-.project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 5%;
-}
-
-.project.project-post {
-  gap: 4rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.project .project-title {
-  font-weight: 800;
-  font-size: 40px;
-}
-
-.project .project-img-pic {
-  width: 80%;
-  box-shadow: 9px 7px 9px -1px #a8a8a8;
-}
-.project .project-img {
-  text-align: center;
-}
-
-.project .project-description {
-  color: gray;
-}
-
-.pie {
-  --w: 150px;
-
-  width: var(--w);
-  aspect-ratio: 1;
-  position: relative;
-  display: inline-grid;
-  place-content: center;
-  margin: 5px;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: sans-serif;
-  --p: 90;
-  --b: 15px;
-  --c: rgb(213, 150, 238);
-  color: white;
-}
-.pie:before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  inset: 0;
-  background: conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
-  -webkit-mask: radial-gradient(
-    farthest-side,
-    #0000 calc(99% - var(--b)),
-    #000 calc(100% - var(--b))
-  );
-  mask: radial-gradient(
-    farthest-side,
-    #0000 calc(99% - var(--b)),
-    #000 calc(100% - var(--b))
-  );
-}
+/*PORTFOLIO END*/

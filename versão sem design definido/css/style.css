@@ -1,0 +1,200 @@
+body {
+  font-family: "Source Code Pro", monospace;
+}
+.cover-page {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  min-height: 60vh;
+}
+/*MENU START*/
+.menu {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-size: 20px;
+  width: auto;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 30px;
+  width: auto;
+  font-weight: 700;
+}
+/*MENU END*/
+
+/*PORTFOLIO*/
+
+.portfolio {
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  gap: 1rem;
+  padding: 5% 5% 0px 5%;
+}
+
+.portfolio-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.portfolio-title {
+  text-transform: uppercase;
+  color: gray;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+.portfolio-content .portfolio-img {
+  max-width: 60vw;
+  bottom: 0;
+}
+/*PORTFOLIO END*/
+
+/*PRESENTATION START*/
+
+.presentation {
+  min-height: auto;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  gap: 1rem;
+  padding: 5% 5% 0px 5%;
+}
+
+.presentation-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  columns: 2;
+}
+.presentation-title {
+  text-transform: uppercase;
+  color: gray;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+.presentation-content .presentation-img {
+  max-width: 60vw;
+  bottom: 0;
+}
+
+/*PRESENTATION END*/
+
+/*PROJECT START*/
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 5%;
+  background-color: #000;
+  color: white;
+}
+
+.project.project-post {
+  gap: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.project .project-title {
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.project .project-img-pic {
+  height: 5%;
+  box-shadow: 9px 7px 9px -1px #e7e7e7;
+}
+.project .project-img {
+  text-align: center;
+}
+
+.project .project-description {
+  color: gray;
+}
+
+.pie {
+  --w: 150px;
+
+  width: var(--w);
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  place-content: center;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  --p: 90;
+  --b: 15px;
+  --c: rgb(213, 150, 238);
+  color: white;
+}
+.pie:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+}
+
+.estilo-subtext-topo {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 3s steps(26), blink 400ms steps(26);
+  border-right: 10px solid white;
+}
+@keyframes typewriter {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 25%;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: white;
+  }
+  to {
+    border-color: transparent;
+  }
+}
