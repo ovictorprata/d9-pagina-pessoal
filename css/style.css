@@ -6,13 +6,12 @@ body {
 
 nav {
   display: flex;
- align-items: center;
- justify-content: space-between; 
- flex-direction: row;
- color: rgb(0, 0, 0);
- padding: 10px;
- font-weight: 700;
-
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-weight: 700;
 }
 nav img {
   width: 15px;
@@ -62,6 +61,41 @@ h2 {
 }
 /*MENU END*/
 
+/*INDEX START*/
+.index {
+  min-height: 95vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.index__header p {
+  font-size: 4rem;
+}
+
+.index__header > .second-line {
+  font-weight: 800;
+}
+
+.index-content strong {
+  font-weight: 800;
+}
+
+.index-content > p {
+  margin-bottom: 1rem;
+}
+
+.index__go-down {
+  text-align: center;
+  margin-bottom: 0;
+}
+.index__go-down > img {
+  width: 30px;
+}
+/*INDEX END*/
+
 /*PRESENTATION START*/
 
 .my-presentation {
@@ -76,53 +110,56 @@ h2 {
   gap: 5rem;
 }
 
-.my-presentation__content{
+.my-presentation__content {
   width: 500px;
+  text-align: justify;
 }
 .my-presentation__content > p {
   padding-top: 10px;
   padding-left: 5%;
+  padding-right: 5%;
   line-height: 15px;
   margin-bottom: 20px;
 }
 
 .my-presentation__content strong {
   font-weight: 800;
-  color: yellow;d
+  color: yellow;
 }
 
 .my-presentation__img {
   width: 275px;
   object-fit: cover;
   object-position: 20% 65px;
+  text-align: center;
 }
 
 .my-presentation__img > img {
   border-radius: 50px 50px 50px 50px;
-  width: 275px;
-
+  width: 250px;
 }
+
+.my-presentation .my-presentation__go-down {
+  width: 30px;
+}
+
+/*PRESENTATION END*/
 
 /*PORTFOLIO*/
 
 .portfolio {
+  padding: 20px;
   min-height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-
-}
-
-.portfolio__content{
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-
+  gap: 3rem;
+  text-align: left;
 }
+
 /*TITLE PORTFOLIO_CONTENT*/
-.portfolio__content > h2{
+.portfolio__content > h2 {
   text-transform: uppercase;
   color: gray;
   font-size: 14px;
