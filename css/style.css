@@ -101,17 +101,17 @@ h2 {
 .my-presentation {
   background-color: black;
   color: white;
-  min-height: 70vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 5%;
-  gap: 5rem;
+  gap: 6rem;
 }
 
 .my-presentation__content {
-  width: 500px;
+  width: 600px;
   text-align: justify;
 }
 .my-presentation__content > p {
@@ -124,13 +124,11 @@ h2 {
 
 .my-presentation__content strong {
   font-weight: 800;
-  color: yellow;
+  color: #5e17eb;
 }
 
 .my-presentation__img {
-  width: 275px;
-  object-fit: cover;
-  object-position: 20% 65px;
+  width: 100%;
   text-align: center;
 }
 
@@ -143,31 +141,70 @@ h2 {
   width: 30px;
 }
 
+.my-presentation h4 {
+  font-weight: 800;
+  color: aqua;
+  font-size: 1rem;
+}
+
 /*PRESENTATION END*/
 
 /*PORTFOLIO*/
-
 .portfolio {
   padding: 20px;
-  min-height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3rem;
-  text-align: left;
+  text-align: justify;
 }
 
-/*TITLE PORTFOLIO_CONTENT*/
-.portfolio__content > h2 {
-  text-transform: uppercase;
-  color: gray;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 0.2rem;
+.portfolio__content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 }
+
 .portfolio img {
   width: 80%;
   bottom: 0;
 }
+
+.portfolio a {
+  color: blue;
+  font-weight: 800;
+  text-decoration: underline;
+}
 /*PORTFOLIO END*/
+
+.skill__content {
+  color: white;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skill__content h3 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #5e17eb;
+}
+
+.skill__content h4 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #73b0ff;
+}
+.soft-skill {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.soft-skill img {
+  height: 80px;
+  width: 80px;
+}
