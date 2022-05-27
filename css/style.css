@@ -21,12 +21,12 @@ body {
   opacity: 0.5;
 }
 
-.btn-inicio:hover {
+.btn-home:hover {
   opacity: 0.9;
 }
 
 @media (max-width: 430px) {
-  .btn-inicio {
+  .btn-home {
     opacity: 0;
   }
 }
@@ -254,6 +254,13 @@ h2 {
 .portfolio .portfolio__img {
   text-align: center;
   bottom: 0;
+  filter: grayscale(0.8);
+  transition: transform 0.2s;
+}
+
+.portfolio .portfolio__img:hover {
+  filter: none;
+  transform: scale(1.5);
 }
 
 .portfolio img {
