@@ -1,3 +1,6 @@
+* {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Source Code Pro", monospace;
 }
@@ -10,11 +13,19 @@ nav {
   justify-content: space-between;
   flex-direction: row;
   color: rgb(0, 0, 0);
-  padding: 10px;
+  padding: 1vw;
   font-weight: 700;
+  position: fixed;
+  background-color: white;
+  min-width: 98vw;
 }
 nav img {
   width: 15px;
+}
+
+nav #menu {
+  text-decoration: underline;
+  color: black;
 }
 
 /*MY NAME MENU TYPING STYLE*/
@@ -64,7 +75,7 @@ h2 {
 /*INDEX START*/
 .index {
   min-height: 95vh;
-  padding: 20px;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,6 +84,7 @@ h2 {
 
 .index__header p {
   font-size: 4rem;
+  text-decoration: underline wavy red 2px;
 }
 
 @media (min-width: 800px) {
@@ -87,9 +99,14 @@ h2 {
   }
 }
 
+@media (min-width: 767px) {
+  * p {
+    font-size: 1.5rem;
+  }
+}
+
 .index__header > .second-line {
   font-weight: 800;
-  border-bottom: 3px red dashed;
 }
 
 .index-content strong {
@@ -104,7 +121,7 @@ h2 {
   text-align: center;
   margin-bottom: 0;
 }
-.index__go-down > img {
+.index__go-down img {
   width: 30px;
 }
 /*INDEX END*/
@@ -137,23 +154,43 @@ h2 {
   margin-bottom: 20px;
 }
 
+@media (min-width: 767px) {
+  .my-presentation__content > p {
+    line-height: 2rem;
+  }
+}
+
+.my-presentation__content > h2 {
+  text-decoration: underline wavy yellow 2px;
+}
+
 .my-presentation__content strong {
   font-weight: 800;
   color: #5e17eb;
 }
 
 .my-presentation__img {
-  width: 100%;
   text-align: center;
 }
 
-.my-presentation__img > img {
+.my-presentation__img img {
   border-radius: 7px;
   width: 250px;
 }
 
+.my-presentation .presentation-strong {
+  text-decoration: underline wavy red 2px;
+  color: white;
+}
+
+.my-presentation .presentation-buser {
+  text-decoration: underline wavy #da0086 2px;
+  color: white;
+}
+
 .my-presentation .my-presentation__go-down {
   width: 30px;
+  text-align: left;
 }
 
 .my-presentation h4 {
@@ -161,12 +198,16 @@ h2 {
   color: aqua;
   font-size: 1rem;
 }
+.my-presentation .line-through {
+  text-decoration: line-through;
+  color: white !important;
+}
 
 /*PRESENTATION END*/
 
 /*PORTFOLIO*/
 .portfolio {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,6 +219,12 @@ h2 {
   display: flex;
   gap: 1rem;
   flex-direction: column;
+  min-width: 90vw;
+}
+
+.portfolio .portfolio__img {
+  text-align: center;
+  bottom: 0;
 }
 
 .portfolio img {
@@ -190,6 +237,16 @@ h2 {
   font-weight: 800;
   text-decoration: underline;
 }
+
+.portfolio .portifolio__title {
+  text-decoration: underline wavy blue 2px;
+  margin-bottom: 30px;
+}
+
+.portfolio__content p {
+  padding: 0% 5% 5% 5%;
+}
+
 /*PORTFOLIO END*/
 
 /*SKILLS START*/
@@ -205,6 +262,13 @@ h2 {
   gap: 2rem;
 }
 
+.my-presentation__content {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
 .skill__content h3 {
   font-weight: 800;
   font-size: 1.5rem;
@@ -218,12 +282,23 @@ h2 {
 }
 .soft-skill {
   display: flex;
-  flex-direction: row;
+
   gap: 2rem;
   flex-wrap: wrap;
   min-height: auto;
 }
 
+.soft-skill__box1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.soft-skill__box2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 .soft-skill-box img {
   height: 50px;
   width: 50px;
@@ -238,11 +313,15 @@ h2 {
 }
 
 .soft-skill-box .box3 {
-  color: gray;
+  color: rgb(0, 124, 21);
 }
 
 .soft-skill-box .box4 {
-  color: red;
+  color: rgb(27, 144, 199);
+}
+
+.skill-title {
+  text-decoration: underline wavy red 2px;
 }
 
 /*SKILLS END*/
