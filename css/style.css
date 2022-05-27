@@ -136,8 +136,14 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5%;
-  gap: 6rem;
+  padding: 10% 5% 10% 5%;
+  gap: 4rem;
+}
+
+@media (min-width: 1440px) {
+  .my-presentation {
+    gap: 20rem;
+  }
 }
 
 .my-presentation__content {
@@ -282,23 +288,18 @@ h2 {
 }
 .soft-skill {
   display: flex;
-
+  flex-direction: column;
   gap: 2rem;
   flex-wrap: wrap;
   min-height: auto;
 }
 
-.soft-skill__box1 {
+.soft-skill__box {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
 
-.soft-skill__box2 {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
 .soft-skill-box img {
   height: 50px;
   width: 50px;
@@ -324,6 +325,77 @@ h2 {
   text-decoration: underline wavy red 2px;
 }
 
+/*SOFT SKILL END*/
+
+/*HARD SKILL START*/
+
+.hard-skill {
+  display: flex;
+  gap: 7rem; /*space between columns*/
+  flex-wrap: wrap;
+  min-height: auto;
+}
+
+.hard-skill-title {
+  text-decoration: underline wavy rgb(39, 134, 243) 2px;
+}
+
+.hard-skill__content {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: rgb(255, 255, 255);
+  accent-color: red;
+}
+
+progress {
+  accent-color: red;
+}
+
+.hard-skill-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+progress {
+  width: 50px;
+  height: 20px;
+}
+
+.hard-skill__content .box1 {
+  color: #e34f26;
+  accent-color: #e34f26;
+}
+
+.hard-skill__content .box2 {
+  color: #2061af;
+  accent-color: #2061af;
+}
+
+.hard-skill__content .box3 {
+  color: #fed142;
+  accent-color: #9b7a10;
+}
+
+.hard-skill__content .box4 {
+  color: #2061af;
+  accent-color: #2061af;
+}
+
+.hard-skill-box img {
+  height: 50px;
+  width: 50px;
+}
+
 /*SKILLS END*/
 
 footer {
@@ -334,10 +406,9 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: black;
-  color: white;
   border-top: 1px solid white;
   padding-top: 20px;
+  text-align: center;
 }
 
 .social-media {
@@ -347,4 +418,5 @@ footer {
 }
 .social-media__icon i {
   font-size: 30px;
+  color: #000000;
 }
