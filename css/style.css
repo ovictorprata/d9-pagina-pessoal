@@ -75,8 +75,21 @@ h2 {
   font-size: 4rem;
 }
 
+@media (min-width: 800px) {
+  .index__header p {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .index__header p {
+    font-size: 13rem;
+  }
+}
+
 .index__header > .second-line {
   font-weight: 800;
+  border-bottom: 3px red dashed;
 }
 
 .index-content strong {
@@ -111,8 +124,10 @@ h2 {
 }
 
 .my-presentation__content {
-  width: 600px;
   text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 .my-presentation__content > p {
   padding-top: 10px;
@@ -133,7 +148,7 @@ h2 {
 }
 
 .my-presentation__img > img {
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 7px;
   width: 250px;
 }
 
@@ -177,6 +192,10 @@ h2 {
 }
 /*PORTFOLIO END*/
 
+/*SKILLS START*/
+.skill {
+  min-height: auto;
+}
 .skill__content {
   color: white;
   background-color: black;
@@ -201,10 +220,52 @@ h2 {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  min-height: auto;
 }
 
-.soft-skill img {
-  height: 80px;
-  width: 80px;
+.soft-skill-box img {
+  height: 50px;
+  width: 50px;
+}
+
+.soft-skill-box .box1 {
+  color: yellow;
+}
+
+.soft-skill-box .box2 {
+  color: orange;
+}
+
+.soft-skill-box .box3 {
+  color: gray;
+}
+
+.soft-skill-box .box4 {
+  color: red;
+}
+
+/*SKILLS END*/
+
+footer {
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: black;
+  color: white;
+  border-top: 1px solid white;
+  padding-top: 20px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.social-media__icon i {
+  font-size: 30px;
 }
